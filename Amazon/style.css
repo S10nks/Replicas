@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    transition: 75ms ease-in-out;
+}
+
+/* Header Navbar 1 */
+
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Box 1 --> Logo */
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background: url(amazon_logo.png);
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+                                                                        /* Border */
+
+                                                                        .border {
+                                                                            border: 2px solid transparent;
+                                                                            cursor: pointer;
+                                                                        }   .border:hover {
+                                                                                border: 2px solid #f1f1f1;
+                                                                                border-radius: 2px;
+                                                                            }
+
+/* Box 2 --> Address */
+
+div.nav-address {
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+p.add-first {
+    font-weight: 500;
+    color: #d8d8d8;
+    font-size: .85rem;
+    margin-left: 15px;
+    margin-top: 7px;
+}   p.add-second {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-left: 3px;
+        color: #f1f1f1;
+    }
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Box 3 --> Search */
+
+div.nav-search {
+    display: flex;
+    background-color: #f3a847;
+    width: 750px;
+    height: 40px;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 3px solid #fff;
+}   .nav-search:hover {
+        border: 3px solid #e79d3d;
+    }
+
+select.search-select {
+    background-color: #f3f3f3;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 0;
+    cursor: pointer;
+}
+
+input.search-input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    padding-left: 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+div.search-icon {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 10;
+    color: #0f1111;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}   div.search-icon:hover {
+        background-color: #e79d3d;
+    }
+
+/* Box 4 --> Language */
+
+div.nav-lang {
+    height: calc(50px - 7px);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    font-size: 1rem;
+    font-weight: 600;
+}   div.nav-lang i {
+        font-size: 1.7rem;
+        transform: translateY(5px);
+    }
+
+/* Box 5 --> Sign In && Box 6 --> Returns*/
+
+div.nav-signin {
+    height: calc(50px - 5px);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+span {
+    font-size: .9rem;
+}
+
+p.nav-second {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Box 7 --> Cart */
+
+div.nav-cart {
+    height: calc(50px - 10px);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+div.nav-cart i{
+    font-size: 30px;
+    color: #f3a847;
+}
+
+/* Panel */
+
+div.panel {
+    height: 40px;
+    color: #f1f1f1;
+    background-color: #232f3e;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+div.panel-ops {
+    font-size: .9rem;
+    width: 80%;
+}
+
+div.panel-ops p {
+    margin-left: 20px;
+    display: inline;
+}
+
+div.panel-deal {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Hero section */
+div.hero-section {
+    background: url(hero_image.jpg) no-repeat;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+a.hero-section-link {
+    color: rgb(34, 170, 255);
+    font-size: 1rem;
+    font-weight: 100;
+    transition: 0.0000000000000000000000000000000000000000001s;
+}   a.hero-section-link:hover {
+        color: #d5511f;
+        text-decoration: underline;
+    }
+
+a.hero-section-link1 {
+    color: rgb(34, 170, 255);
+    font-size: 1rem;
+    font-weight: 100;
+    margin-left: 25px   ;
+    transition: 0.0000000000000000000000000000000000000000001s;
+}   a.hero-section-link1:hover {
+        color: #d5511f;
+        text-decoration: underline;
+    }
+
+div.hero-message {
+    background-color: white;
+    width: 1460px;
+    height: 40px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+/* Shop Cards section */
+
+div.shop-section1 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e3e6e6;
+    height: 485px;
+}
+
+div.box {
+    margin-top: 25px;
+    height: 420px;
+    width: calc(23% - 20px);
+    padding: 20px 10px;
+    background-color: #fff;
+    border: #0f1111 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+img.box1-img {
+    margin-top: 25px;
+    margin-left: -10px;
+    height: 320px;
+    border-radius: 5px;
+}
+img.box2-img {
+    margin-top: 25px;
+    margin-left: -10px;
+    height: 320px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+div.shop-section2    {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e3e6e6;
+    border-radius: 5px;
+}
+
+div.box1 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 420px;
+    width: calc(23% - 20px);
+    padding: 20px 10px;
+    background-color: #fff;
+    border: #0f1111 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Shop Row Section */
+
+div.shop-section3 {
+  height: calc(399px - 50px);
+  width: calc(100% - 50px);
+  background-color: #e3e6e6;
+  display: flex;
+  padding: 0px 25px 25px 25px;
+  align-self: center;
+}
+
+div.inner-section {
+    width: calc(100% - 50px);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+
+div.shop-section4 {
+    height: calc(399px - 50px);
+    width: calc(100% - 50px);
+    background-color: #e3e6e6;
+    display: flex;
+    padding: 0px 25px 0px 25px;
+    align-self: center;
+  }
+
+/* Row 1 */
+div.shop-section3 h3 {
+    margin-top: 5px;
+}
+
+img.row1 {
+    height: 165px;
+    float: none;
+}
+
+div.row-part1 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+}
+
+button.off {
+    font-size: .8rem;
+    text-align: center;
+    height: 30px;
+    font-weight: 600;
+    width: 60px;
+    background-color: #cc0c39;
+    border-radius: 4px;
+    border: hidden;
+    cursor: pointer;
+    color: #fff;
+    float: left;
+}
+
+h6 {
+    color: #cc0c39;
+    font-size: .9rem;
+    font-weight: 600;
+    transform: translateY(5px) translateX(10px);
+}
+
+a.small {
+    font-size: .9rem;
+    color: #444444;
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+p.txt {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* Row 2 */
+
+div.row-part2 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+}
+
+img.row2 {
+    height: 165px;
+    float: none;
+    margin-left: 50px;
+    transform: translateY(-5px);
+}
+
+/* Row 3 */
+div.row-part3 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+    transform: translateX(-30px);
+}
+
+/* Row 4 */
+div.row-part4 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    transform: translateX(760px) translateY(-255px);
+}
+
+/* Row 5 */
+div.row-part5 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    transform: translateX(1000px) translateY(-510px);
+}
+
+/* Row 6 */
+div.row-part6 {
+    cursor: pointer;   
+    width: 250px;
+    padding-right: 5px;
+    padding-left: 5px;
+    transform: translateX(1240px) translateY(-765px);
+}
+
+/* Section 5 column*/
+
+div.shop-section5 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e3e6e6;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+div.primary {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e3e6e6;
+    padding-top: 30px;
+    background-color: #232f3e;
+}
+
+div.primary h3 {
+    color: #fff;
+    font-size: 1rem;
+}
+
+div.primary a {
+    color: #ccc;
+    font-size: .9rem;
+}   div.primary a:hover {
+        text-decoration: underline;
+}
+
+button.bottom--top {
+    height: 50px;
+    width: 100%;
+    background-color: #37485c;
+    color: #f1f1f1;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+}   button.bottom--top:hover {
+        background-color: #3d4f64;
+}
+
+div.sub {
+    height: 108px;
+    background-color: #232f3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.sub-amazon {
+    height: 60px;
+    float: left;
+    transform: translateY(3px);
+}
+
+select.lang {
+    height: 40px;
+    width: calc(150px- 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 15px;
+    margin-left: 100px;
+    background-color: transparent;
+    border: 1px solid #8d9096;
+    border-radius: 4px;
+    color: #8d9096;
+}
+select.currency {
+    height: 40px;
+    width: calc(150px- 30px);
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: transparent;
+    border: 1px solid #8d9096;
+    border-radius: 4px;
+    color: #8d9096;
+}

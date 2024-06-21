@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+
+    <link rel="icon" href="apple-head-title-logo.png" type="image/png">
+
+    <!-- Style CSS -->
+    <style>
+        body::-webkit-scrollbar {
+            opacity: 0;
+            width: 0px;
+            color: transparent;
+            background-color: transparent;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter';
+            text-decoration: none;
+        }
+
+        header {
+            height: 90px;
+            width: 100%;
+            margin-bottom: 50px;
+            background-color: rgba(1, 1, 1, 0.9);
+            display: inline-block;
+        }
+
+        header > h1 {
+            color: #f1f1f1;
+            font-size: 3.7rem;
+            height: 100%;
+            padding-top: 13px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        div.nav {
+            display: inline-block;
+            position: relative;
+            top: -92px;
+            left: 50%;
+        } div.nav > button {
+            color: #f1f1f1;
+            font-size: 2rem;
+            margin-right: 30px;
+            margin-left: 0;
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+            background-color: transparent;
+            border: hidden;
+            border-radius: 15px;
+            transition: 0.3s;
+        } div.nav > button:hover {
+            background-color: #333;
+            box-shadow: 1px 9px 40px 19px rgba(255, 255, 255, 0.15);
+        }
+
+        button > span.tooltiptext {
+            opacity: 0;
+            background-color: #222;
+            color: #f1f1f1;
+            text-align: center;
+            border-radius: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 7px;
+            padding-bottom: 5px;
+            font-size: 1rem;
+            /* Position the tooltip */
+            position: absolute;
+            transform: translateX(0px);
+            /* transform: translateY(65px); */
+            z-index: 1;
+            font-family: 'Architects Daughter';
+        }
+
+        button:hover > span.tooltiptext {
+            opacity: 1;
+        }
+
+        div.body {
+            height: calc(100vh - 89px);
+            margin-bottom: -5px;
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-top: -65px;
+            background: url(body\ bg\ .jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }   div.bg-main {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(1, 1, 1, 0.4);
+        }
+
+
+        h1.body-title {
+            color: #f1f1f1;
+            text-align: left;
+            padding-top: 220px;
+            padding-left: 50px;
+            font-size: 4rem;
+            font-family: 'Architects Daughter';
+        }
+        h2.body-title2 {
+            color: #f1f1f1;
+            text-align: left;
+            font-size: 3rem;
+            padding-top: 20px;
+            font-family: 'Architects Daughter';
+        }
+        button.all {
+            height: 80px;
+            width: 200px;
+            display: block;
+            position: relative;
+            top: 9%;
+            left: 6%;
+            background: #1a1a1a;
+            border: 5px solid #f1f1f1;
+            border-radius: 5px;
+            color: #f1f1f1;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.4s;
+            font-family: 'Architects Daughter';
+        }   button.all:hover {
+            background-color: #f1f1f1;
+            color: #111;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1><ion-icon name="logo-apple"></ion-icon></h1>
+        
+        <div class="nav">
+
+            <button>
+                <ion-icon name="home"></ion-icon>
+                <span class="tooltiptext">Home</span>
+            </button>
+
+            <button class="mac-desk">
+                <ion-icon name="desktop"></ion-icon>
+                <span class="tooltiptext">Macs</span>
+            </button>
+
+            <button class="mac">
+                <ion-icon name="laptop"></ion-icon>
+                <span class="tooltiptext">Macs</span>            
+            </button>
+
+            <button class="iphone">
+                <ion-icon name="phone-portrait"></ion-icon>
+                <span class="tooltiptext">Iphones</span>
+            </button>
+
+            <button class="ipad">
+                <ion-icon name="tablet-landscape"></ion-icon>
+                <span class="tooltiptext">Ipads</span>
+            </button>
+
+            <button class="iwatch">
+                <ion-icon name="watch"></ion-icon>
+                <span class="tooltiptext">Apple watches</span>
+            </button>
+
+            <button class="airpods">
+                <ion-icon name="headset"></ion-icon>
+                <span class="tooltiptext">Airpods</span>
+            </button>
+
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="bg-main">
+
+            <h1 class="body-title">Revolutionize <br> your world <br> with Apple !!!</h1>
+            <h2 class="body-title2"></h2>
+            <h1 class="body-title-apple"></h1>
+
+            <button class="all">All Products</button>
+
+        </div>
+    </div>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa:wght@300;400;500;600;700&family=Inter:wght@400;500&family=Montserrat:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Poppins:wght@200;300;400;500&family=Quicksand:wght@300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Script JS -->
+    <script>
+
+    </script>
+
+</body>
+</html>

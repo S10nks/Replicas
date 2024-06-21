@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+
+    <link rel="icon" href="apple-head-title-logo.png" type="image/png">
+
+    <!-- Style CSS -->
+    <style>
+        body::-webkit-scrollbar {
+            width: 0px;
+            background-color: transparent;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter';
+            text-decoration: none;
+        }
+
+        header {
+            height: 90px;
+            width: 100%;
+            margin-bottom: 50px;
+            background-color: rgba(1, 1, 1, 0.9);
+            display: inline-block;
+        }
+
+        header > h1 {
+            color: #f1f1f1;
+            font-size: 3.7rem;
+            height: 100%;
+            padding-top: 13px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        div.nav {
+            display: inline-block;
+            position: relative;
+            top: -92px;
+            left: 55%;
+        } div.nav > button {
+            color: #f1f1f1;
+            font-size: 2rem;
+            margin-right: 30px;
+            margin-left: 0;
+            height: 70px;
+            width: 70px;
+            cursor: pointer;
+            background-color: transparent;
+            border: hidden;
+            border-radius: 15px;
+            transition: 0.3s;
+        } div.nav > button:hover {
+            background-color: #333;
+            box-shadow: 1px 9px 40px 19px rgba(255, 255, 255, 0.15);
+        }
+
+        button > span.tooltiptext {
+            opacity: 0;
+            background-color: #222;
+            color: #f1f1f1;
+            text-align: center;
+            border-radius: 6px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 7px;
+            padding-bottom: 5px;
+            font-size: 1rem;
+            /* Position the tooltip */
+            position: absolute;
+            transform: translateX(0px);
+            /* transform: translateY(65px); */
+            z-index: 1;
+        }
+
+        button:hover > span.tooltiptext {
+            opacity: 1;
+        }
+
+        div.body {
+            height: calc(100vh - 89px);
+            margin-bottom: -5px;
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-top: -65px;
+            background: url(body_bg.jpeg) no-repeat;
+            background-position: bottom;
+            background-color: #000;
+            background-size: 110vh;
+        }   div.bg-main {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(1, 1, 1, 0.4);
+        }
+
+
+        h1.body-title {
+            color: #f1f1f1;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 3.8rem;
+        }
+        h2.body-title2 {
+            color: #f1f1f1;
+            text-align: center;
+            font-size: 2.8rem;
+            padding-top: 30px;
+        }
+        button.all {
+            height: 80px;
+            width: 220px;
+            display: block;
+            position: relative;
+            top: 20%;
+            left: 43.1%;
+            background: rgba(1, 1, 1, 4);
+            border: 5px solid #f1f1f1;
+            border-radius: 5px;
+            color: #f1f1f1;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.4s;
+        }   button.all:hover {
+            background-color: #f1f1f1;
+            color: #111;
+        }
+
+        section.iphone14pro {
+            height: calc(100vh + 6px);
+            width: 100%;
+            background-image: url(a-Iphone14pro.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-color: #000;
+        }
+        h1.i14pro {
+            padding-top: 50px;
+            font-size: 3rem;
+            color: #f1f1f1;
+            text-align: center;
+        }
+        h2.i14pro {
+            color: #f1f1f1;
+            font-size: 1.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a.a {
+            color: #6cb4f2;font-size: 1.2rem;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            margin-top: 40px;
+            left: 43%;
+            transition: 0.5s;
+        }   a.a:hover {
+            color: #a334d9;
+        }
+
+
+        section.iphone14 {
+            height: 100vh;
+            width: 100%;
+            background-image: url(a-Iphone14.jpg);
+            background-repeat: no-repeat;
+            background-size: 130vh;
+            background-position: bottom;
+            background-color: #fafafa;
+        }
+        h1.i14 {
+            padding-top: 50px;
+            font-size: 3rem;
+            color: #000;
+            text-align: center;
+        }
+        h2.i14 {
+            color: #000;
+            font-size: 1.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a.b {
+            color: #e72d3a;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            margin-top: 40px;
+            left: 43%;
+            transition: 0.5s;
+        }   a.b:hover {
+            color: #b4c2d1;
+        }
+
+
+        section.macbook-pro {
+            height: 100vh;
+            width: 100%;
+            background-image: url(a-macbookpro.jpg);
+            background-repeat: no-repeat;
+            background-size: 140vh;
+            background-position: bottom;
+            background-color: #fafafa;
+        }
+        a.c {
+            color: #00b777;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            margin-top: 40px;
+            left: 43%;
+            transition: 0.5s;
+        } a.c:hover {
+            color: #5c5d61;
+        }
+
+        section.watch {
+            height: 100vh;
+            width: 100%;
+            background-image: url(a-watch8.jpg);
+            background-repeat: no-repeat;
+            background-size: 150vh;
+            background-position: bottom;
+            background-color: #000;
+        }
+        h1.watch {
+            padding-top: 50px;
+            font-size: 3rem;
+            color: #f1f1f1;
+            text-align: center;
+        }
+        h2.watch {
+            color: #f1f1f1;
+            font-size: 1.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+        h3.watch {
+            color: #91171b;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a.d {
+            color: #91171b;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            left: 43%;
+            transition: 0.5s;
+        }   a.d:hover {
+            color: #ffe3d1;
+        }
+
+        section.airpods {
+            height: 100vh;
+            width: 100%;
+
+        }
+        div.airmax {
+            height: 100%;
+            width: 50%;
+            background-image: url(a-airpodsmax.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 150vh;
+        }
+        div.airpro {
+            height: 100%;
+            width: 50%;
+            display: block;
+            position: relative;
+            left: 50%;
+            top: -100vh;
+            background-image: url(a-airpodspro.jpg);
+            background-repeat: no-repeat;
+            background-position-x: 10vh;
+            background-position-y: 31vh;
+            background-size: 90vh;
+        }
+        h1.max {
+            padding-top: 30px;
+            font-size: 3rem;
+            color: #000;
+            text-align: center;
+        }
+        h2.max {
+            color: #000;
+            font-size: 1.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a.e {
+            color: #49f88a;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            left: 37%;
+            transition: 0.5s;
+        } a.e:hover {
+            color: #848587;
+        }
+
+        section.ipad {
+            height: 100vh;
+            width: 100%;
+            background-image: url(a-ipad.jpg);
+            background-repeat: no-repeat;
+            background-size: 150vh;
+            background-position: bottom;
+            background-color: #000;
+        }
+
+        button.h2 {
+            height: 60px;
+            width: 380px;
+            transform: translateY(-1px);
+            background-color: transparent;
+            border: hidden;
+            color: #181;
+            font-weight: 600;
+            font-size: 2.8rem;
+            cursor: pointer;
+        }
+
+        footer {
+            height: 75px;
+            width: calc(100% - 40px);
+            display: block;
+            position: relative;
+            bottom: 0;
+            background-color: #000;
+            color: #f1f1f1;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        footer > ion-icon {
+            transform: translateY(-5px);
+        }
+        footer > h2 {
+            font-size: 1rem;
+            font-weight: 100;
+            padding-top: 20px;
+        }
+        ion-icon.apple {
+            font-size: 5rem;
+            margin-right: 50px;
+            margin-top: 15px;
+            margin-left: 30px;
+            float: left;
+        }
+        a.copy {
+            margin-left: 900px;
+            margin-top: -65px;
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1><ion-icon name="logo-apple"></ion-icon></h1>
+
+        <div class="nav">
+
+            <button class="mac-desk">
+                <ion-icon name="desktop"></ion-icon>
+                <span class="tooltiptext">Macs</span>
+            </button>
+
+            <button class="mac">
+                <ion-icon name="laptop"></ion-icon>
+                <span class="tooltiptext">Macbooks</span>
+            </button>
+
+            <button class="iphone">
+                <ion-icon name="phone-portrait"></ion-icon>
+                <span class="tooltiptext">iPhones</span>
+            </button>
+
+            <button class="ipad">
+                <ion-icon name="tablet-landscape"></ion-icon>
+                <span class="tooltiptext">Ipads</span>
+            </button>
+
+            <button class="iwatch">
+                <ion-icon name="watch"></ion-icon>
+                <span class="tooltiptext">Apple watches</span>
+            </button>
+
+            <button class="airpods">
+                <ion-icon name="headset"></ion-icon>
+                <span class="tooltiptext">Airpods</span>
+            </button>
+
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="bg-main">
+
+            <h1 class="body-title">Revolutionize your world </h1>
+            <h2 class="body-title2">with Apple <a href="#macbook-pro-m2"><button class="h2">Macbook Pro M2</button></a></h2>
+
+            <!-- <button class="all"> <span>All Products</span></button> -->
+
+        </div>
+    </div>
+
+    <section class="iphone14">
+        <div class="bg-iphone14">
+
+            <h1 class="i14">iPhone 14</h1>
+            <h2 class="i14">Exciting and Wonderful</h2>
+
+            <a href="" class="b">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="b">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+    </section>
+
+    <section class="iphone14pro">
+        <div class="bg-iphone14pro">
+
+            <h1 class="i14pro">iPhone 14 Pro</h1>
+            <h2 class="i14pro">Above and Beyond</h2>
+
+            <a href="" class="a">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="a">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+    </section>
+
+    <section class="macbook-pro" id="macbook-pro-m2">
+        <div class="bg-macbook">
+
+            <h1 class="i14">Macbook Pro M2</h1>
+            <h2 class="i14">Impressively big and Impossibly thin</h2>
+
+            <a href="" class="c">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="c">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+    </section>
+
+    <section class="watch">
+        <div class="bg-watch">
+
+            <h1 class="watch"><ion-icon name="logo-apple" style="transform: translateY(3.5px);"></ion-icon> Watch</h1>
+            <h3 class="watch">SERIES 8</h3>
+            <h2 class="watch">Miles ahead</h2>
+
+            <a href="" class="d">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="d">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+    </section>
+
+    <section class="airpods">
+        <div class="airmax">
+
+            <h1 class="max">Airpods Max</h1>
+            <h2 class="max">The Maximum</h2>
+
+            <a href="" class="e">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="e">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+
+        <div class="airpro">
+
+            <h1 class="max">Airpods Pro</h1>
+            <h2 class="max">Rebuilt and Pro</h2>
+
+            <a href="" class="e">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="e">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+        </div>
+    </section>
+
+    <section class="ipad">
+
+        <h1 class="watch">iPad Pro</h1>
+        <h2 class="watch">Supercharged with M2</h2>
+
+            <a href="" class="a">Learn More <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+            <a href="" class="a">Buy <ion-icon style="transform: translateY(3.5px);" name="chevron-forward-outline"></ion-icon></a>
+
+    </section>
+
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Inter:wght@400;500&family=Montserrat:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=Poppins:wght@200;300;400;500&family=Quicksand:wght@300;400;500;600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Script JS -->
+    <script>
+        console.log("Apple Copy");
+        console.log("Made by Ratan Dixit");
+    </script>
+
+</body>
+</html>

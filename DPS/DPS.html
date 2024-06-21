@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS</title>
+
+    <style>
+        * {
+            font-family: 'Lexend';
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(dps.png);
+            background-repeat: no-repeat;
+            background-size: 215vh ;
+        }
+
+        section.header {
+            height: calc(100vh);
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(1, 1, 1, 0.5);
+        }
+
+        div.nav-bar {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 80px;
+            width: calc(100% - 40px);
+            display: block;
+            position: fixed;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        div.nav-bar > div.logo {
+            display: block;
+            position: fixed;
+        }
+
+        div.nav-bar > div.logo > h1 {
+            font-size: 2.2rem;
+            color: #f1f1f1;
+            margin-top: 13px;
+            cursor: none;
+        }
+
+        ion-icon {
+            transform: translateY(6px);
+            font-size: 2.5rem;
+        }
+
+        div.nav-bar > div.links {
+            display: block;
+            position: fixed;
+            left: calc(77% - 4px);
+            margin-top: calc(1.5% + 6px);
+        }
+        div.nav-bar > div.links > a.home {
+            color: #f1f1f1;
+            margin-left: 30px;
+            font-size: 1.2rem;
+        }
+        div.nav-bar > div.links > a.home::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 4px;
+            width: 0;
+            background: #1e974a;
+            border-radius: 4px;
+            transition: width 300ms ease;
+        }
+        div.nav-bar > div.links > a.home:hover::before {
+            width: 55px;
+        }        
+        div.nav-bar > div.links > a.about {
+            color: #f1f1f1;
+            margin-left: 30px;
+            font-size: 1.2rem;
+        }
+        div.nav-bar > div.links > a.about::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 4px;
+            width: 0;
+            background: #1e974a;
+            border-radius: 4px;
+            transition: width 300ms ease;
+        }
+        div.nav-bar > div.links > a.about:hover::before {
+            width: 85px;
+        }        
+        
+        div.nav-bar > div.links > a.contact {
+            color: #f1f1f1;
+            margin-left: 30px;
+            font-size: 1.2rem;
+        }
+        div.nav-bar > div.links > a.contact::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 4px;
+            width: 0;
+            background: #1e974a;
+            border-radius: 4px;
+            transition: width 300ms ease;
+        }
+        div.nav-bar > div.links > a.contact:hover::before {
+            width: 103px;
+        }
+
+
+        div.header-content {
+            height: calc(100vh - 100px);
+            width: 100%;
+            padding-top: 100px;
+        }
+        div.header-content > h1 {
+            text-align: center;
+            margin-top: 10%;
+            margin-bottom: 50px;
+            color: #1e974a;
+            font-size: 4.5rem;
+        }
+        div.header-content > p {
+            text-align: center;
+            color: #f1f1f1;
+            font-size: 1rem;
+        }
+        div.header-content > button {
+            height: 50px;
+            width: 150px;
+            font-size: 1.2rem;
+            border-radius: 3px;
+            border: 2px solid #f1f1f1;
+            background-color: transparent;
+            color: #f1f1f1;
+            transition: 150ms;
+            margin-left: calc(45% + 5px);
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        div.header-content > button:hover {
+            background-color: #0d8138;
+            transition: 150ms;
+            color: #f1f1f1;
+            border: 2px solid #0d8138;
+        }
+
+
+        section.courses {
+            height: calc(150vh);
+            width: 100%;
+            background-image: url(oceanbg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div.bg {
+            backdrop-filter: blur(4px);
+            background-color: rgba(1, 1, 1, 0.4);
+            height: calc(100% - 100px);
+            width: 100%;
+            padding-top: 100px;
+            scroll-behavior: smooth;
+        }
+        section.courses > div.bg > h1{
+            color: #1f1f1f;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+
+
+        div.pre-primary {
+            height: 210px;
+            width: 480px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: block;
+            position: relative;
+            left: calc(16%);
+            text-align: center;
+            border-radius: 10px;
+        }
+        div.primary {
+            height: 210px;
+            width: 480px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: block;
+            position: relative;
+            left: calc(775px + 3.5%);
+            top: -230px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        div.middle-school {
+            height: 210px;
+            width: 480px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: block;
+            position: relative;
+            left: calc(16%);
+            top: -153px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        div.high-school {
+            height: 210px;
+            width: 480px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: block;
+            position: relative;
+            left: calc(775px + 3.5%);
+            border-radius: 10px;
+            top: -383px;
+            text-align: center;
+        }
+
+        div.puc {
+            height: 200px;
+            width: 1077px;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            display: block;
+            top: -316px;
+            left: calc(16%);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+
+
+
+        section.campuses {
+            height: 100vh;
+            width: 100%;
+            background-image: url(dps2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        div.bg2 {
+            backdrop-filter: blur(4px);
+            background-color: rgba(1, 1, 1, 0.5);
+            height: calc(100% - 100px);
+            width: 100%;
+            padding-top: 100px;
+            scroll-behavior: smooth;
+            margin-bottom: -200px;
+        }
+
+        section.campuses > div.bg2 > h1 {
+            color: #f1f1f1;
+            margin-top: 10px;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        div.india {
+            height: 390px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 490px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-top: 80px;
+            margin-left: 181px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        div.outside-india {
+            height: 390px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            width: 490px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-top: 80px;
+            margin-left: 273px;
+            display: block;
+            position: relative;
+            left: calc(10px + 569px);
+            top: -530px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        footer {
+            background-color: #010101;
+            color: #f1f1f1;
+            height: 420px;
+            width: 100%;
+            padding-top: 70px;
+            margin-top: -0px;
+        }
+
+        footer > img {
+            float: left;
+            height: 150px;
+            width: 150px;
+            margin-left: 90px;
+            margin-right: 20px;
+        }
+        footer > h1 {
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+
+        footer > h2 {
+            font-size: 01rem;
+            color: #e9b609;
+            margin-top: 50px;
+            margin-left: 5%;
+        }
+        footer > h2 > a {
+            color: #e9b609;
+        }
+
+        footer > h2.policies {
+            font-size: 0.9rem;
+            margin-top: 50px;
+            margin-left: 5%;
+            margin-bottom: -30px;
+            text-align: right;
+            margin-right: 5%;
+        }
+
+        footer > h2.policies > a {
+            color: #0064a1;
+        }
+
+        footer > h2.policies > a:hover {
+            color: #1e974a;
+        }
+
+        footer > button {
+            left: 82%;
+            top: -30%;
+            bottom: -10%;
+            position: relative;
+            display: block;
+            background-color: transparent;
+            border-radius: 5px;
+            border: 2px solid #e9b609;
+            color: #e9b609;
+            cursor: pointer;
+            height: 50px;
+            width: 150px;
+        }
+        
+        footer > button:hover {
+            background-color: #e9b609;
+            color: #010101;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <section class="header">
+
+        <div class="nav-bar">
+
+            <div class="logo">
+                <h1><ion-icon name="school"></ion-icon> DPS</h1>
+            </div>
+
+            <div class="links">
+                <a href="DPS.html" class="home">Home</a>
+                <a href="" class="about">About Us</a>
+                <a href="" class="contact">Contact Us</a>
+            </div>
+
+        </div>
+
+        <div class="header-content">
+            <h1> Delhi Public School </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis minus unde atque, delectus totam rerum. Lorem ipsum dolor sit amet.<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, maiores!</p>
+            <button>Contact Us</button>
+        </div>
+
+    </section>
+
+
+
+    <hr style="background-color: #f1f1f1; height: 2px;">
+
+
+
+    <section class="courses">
+        <div class="bg">
+
+            <h1> What We Offer </h1><br><br>
+
+            <div class="pre-primary">
+                <h2>Nursery to UKG</h2><br>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At debitis ducimus nulla illo accusantium quibusdam impedit libero provident quasi reprehenderit esse animi perspiciatis odio, eum magni excepturi reiciendis! Libero, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo illum amet non nihil in qui dolorem omnis quam consequatur atque.</p>
+            </div>
+
+            <div class="primary">
+                <h2>Grade I to V</h2><br>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequatur odit dolore iusto dolores ea accusamus iure eligendi nobis repellendus ipsam debitis dignissimos repudiandae, maiores amet sed atque placeat quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae animi debitis quasi, quas at voluptatibus fuga. Voluptates, quaerat a?</p>
+            </div>
+
+            <div class="middle-school">
+                <h2>Grade VI to VIII</h2><br>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, voluptas quibusdam, fugiat repellendus vitae eum perspiciatis dolores aut incidunt iste, expedita illum minus neque praesentium odit maiores voluptatum! Iure, accusantium?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, autem at! Corporis consectetur culpa quisquam quibusdam fghb</p>
+            </div>
+
+            <div class="high-school">
+                <h2>Grade IX to X</h2><br>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, voluptas quibusdam, fugiat repellendus vitae eum perspiciatis dolores aut incidunt iste, expedita illum minus neque praesentium odit maiores voluptatum! Iure, accusantium?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, autem at! Corporis consectetur culpa quisquam quibusdam sapih</p>
+            </div>
+
+            <div class="puc">
+                <h2>Grade XI to XII</h2><br>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, voluptas quibusdam, fugiat repellendus vitae eum perspiciatis dolores aut incidunt iste, expedita illum minus neque praesentium odit maiores voluptatum! Iure, accusantium?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, autem at! Corporis consectetur culpa quisquam quibusdam sapieg Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum praesentium eligendi sunt cumque molestiae quos possimus, explicabo veniam illo incidunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, ab est nisi commodi totam hic architecto aperiam neque id in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, officia.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <hr style="background-color: #f1f1f1; height: 2px;">
+
+
+
+    <section class="campuses">
+        <div class="bg2">
+
+        <h1>Our Global Campus</h1>
+
+        <div class="india">
+            <h2>We have 210 schools in India</h2><br><br>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odit consequatur voluptatum incidunt ipsa eos, eaque eligendi amet magnam, alias, similique rem voluptate architecto inventore facere quae quos dolores quaerat exercitationem! Natus laboriosam commodi quisquam minima sed eaque numquam beatae soluta modi illum, nam aliquid necessitatibus fugit consectetur animi eveniet voluptas. Animi minima non enim suscipit sunt ratione ea inventore corrupti consequuntur rerum, facilis veritatis. Tenetur, amet. Dolores modi impedit mollitia iste ipsam tempore iure aut dolore esse? Facere pariatur necessitatibus optio repudiandae enim? Autem voluptas, nobis dignissimos quisquam eius illum quis quae, amet deserunt tempore ad rerum quibusdam fuga? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, fugiat?</p>
+        </div>
+
+        <div class="outside-india">
+            <h2>We have 7 international schools</h2><br><br>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odit consequatur voluptatum incidunt ipsa eos, eaque eligendi amet magnam, alias, similique rem voluptate architecto inventore facere quae quos dolores quaerat exercitationem! Natus laboriosam commodi quisquam minima sed eaque numquam beatae soluta modi illum, nam aliquid necessitatibus fugit consectetur animi eveniet voluptas. Animi minima non enim suscipit sunt ratione ea inventore corrupti consequuntur rerum, facilis veritatis. Tenetur, amet. Dolores modi impedit mollitia iste ipsam tempore iure aut dolore esse? Facere pariatur necessitatibus optio repudiandae enim? Autem voluptas, nobis dignissimos quisquam eius illum quis quae, amet deserunt tempore ad rerum quibusdam fuga? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, fugiat?</p>
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <hr style="background-color: #f1f1f1; height: 2px;">
+
+
+
+    <footer>
+        
+        <img src="logo-3-.png" alt="DPS">
+            <h1> CBSE: 080-22518100 / 080-27822260 9663783617 / 6364547474 <br> Cambridge : +91-9663115148 / 080-22518130 / 080-22518140</h1>
+            <h1> contact@east.dpsbangalore.edu.in <br> admissions@east.dpsbangalore.edu.in</h1>
+
+            <button> Facilities </button><br>
+            <button> Contact Us </button>
+
+        <br>    <hr style="width: 90%; margin-left: 5%; margin-top: -100px; background-color: #999;">   
+
+        <h2><a href="">© 2021 - DPS BANGALORE All Rights Reserved</a></h2>
+        <h2 class="policies"><a href="">Privacy Policies</a></h2>
+        <h2 class="policies"><a href="">Made By Ratan Dixit</a></h2>
+
+    </footer>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Poppins&family=Quicksand:wght@500&family=Urbanist&display=swap" rel="stylesheet">
+
+</body>
+</html>
