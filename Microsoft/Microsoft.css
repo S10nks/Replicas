@@ -1,0 +1,555 @@
+* {
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: .1s;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    height: 0px;
+    background-color: transparent;
+    color: transparent;
+    width: 0px;
+}
+
+/* Header */
+
+header {
+    height: 55px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+}
+
+img.ms-logo {
+    height: 25px;
+    width: 110px;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+
+div.nav1 {
+    margin-left: 30px;
+    margin-top: 16px;
+}
+
+a.nav1 {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    position: relative;
+    font-size: .85em;
+    font-weight: 400;
+}   a.nav1::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        border-radius: 10px;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: 0.5s;
+    }   a.nav1:hover:after {
+            transform: scaleX(1);
+        }
+
+div.nav2 {
+    margin-left: 30px;
+    margin-top: -1px;
+    display: block;
+    position: absolute;
+    right: 5%;
+    justify-items: end;
+}
+
+a.nav2 {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    position: relative;
+    font-size: .85em;
+    font-weight: 400;
+}   a.nav2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 10px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s;
+    }   a.nav2:hover:after {
+            transform: scaleX(1);
+        }
+
+a.nav22 {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    position: relative;
+    font-size: .85em;
+    font-weight: 400;
+}   header > div.nav2 > a > ion-icon {
+    font-size: 2.2rem;
+    color: #828282;
+    transform: translateY(12px) translateX(7px);
+}
+
+/* Hero Section */
+
+section.hero {
+    height: 500px;
+    width: 100%;
+}
+
+/* Slide Show */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1600px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #111;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Caption text */
+.text2 {
+  color: #000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
+    h1.hero-text1 {
+        text-align: center;
+        transform: translateY(-180px) translateX(250px);
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+    p.hero-para1 {
+        text-align: center;
+        transform: translateY(-165px) translateX(375px);
+        font-size: .9rem;
+        font-weight: 500;
+    }
+    button.learn1-more {
+        width: 110px;
+        height: 40px;
+        border: hidden;
+        border-radius: 1px;
+        background-color: #0067b8;
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: .9rem;
+        transform: translateY(-140px) translateX(930px);
+    }   button.learn1-more:hover {
+            background-color: #005ca5;
+    }
+
+.text1 {
+    color: #000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+h1.hero-text2 {
+    text-align: center;
+    transform: translateY(-180px) translateX(-455px);
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+p.hero-para2 {
+    text-align: center;
+    transform: translateY(-165px) translateX(-405px);
+    font-size: .9rem;
+    font-weight: 500;
+}
+p.hero-para2_1 {
+    text-align: center;
+    transform: translateY(-160px) translateX(-460px);
+    font-size: .9rem;
+    font-weight: 500;
+}
+button.learn2-more {
+    width: 110px;
+    height: 40px;
+    border: hidden;
+    border-radius: 1px;
+    background-color: #0067b8;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9rem;
+    transform: translateY(-140px) translateX(195px);
+}   button.learn2-more:hover {
+        background-color: #005ca5;
+}
+
+
+/* Hero Btn */
+div.hero-btns {
+    height: 120px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.hero {
+    background-color: transparent;
+    height: 111px;
+    width: 200px;
+    border: hidden;
+    cursor: pointer;
+    color: #0067b8;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+div.hero-btns > a > button.hero > i {
+    color: #000;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+
+/* Card_1 */
+div.card_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+div.card1,
+div.card2,
+div.card3,
+div.card4 {
+  height: 400px;
+  width: 380px;
+  background-color: transparent;
+  cursor: pointer;
+}
+img.card1 {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 300px;
+  margin-left: 40px;
+}
+h2.card1-hero {
+  margin-bottom: 7px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+p.card1-hero {
+  text-align: center;
+  margin-bottom: 10px;
+}
+a.learn {
+  color: #0067b8;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.5s;
+  margin-top: 10px;
+  margin-left: 140px;
+}   a.learn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Hero2 */
+div.bad-hero {
+  background: url(bad-hero.png) center no-repeat;
+  height: 500px;
+  width: 1500px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  margin-top: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button.alert {
+  height: 30px;
+  width: 60px;
+  background-color: #ffb900;
+  border: hidden;
+  border-radius: 2px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+h2.bad-hero-h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+p.bad-hero-p {
+  color: #fff;
+}
+button.get {
+  background-color: #0067b8;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  font-size: .9rem;
+  font-weight: 600;
+  border: hidden;
+  margin-top: 25px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+} button.get:hover {
+  background-color: #005ca5;
+}
+div.body-bad-hero {
+  display: block;
+  position: relative;
+  top: 25%;
+  left: 60%;
+}
+
+
+/* Contact */
+h2.follow {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 50px;
+    padding-left: 50px;
+} 
+button.fb {
+  background-color: transparent;
+  border: hidden;
+  cursor: pointer;
+  font-size: 1.9rem;
+  margin-left: 50px;
+  transform: translateY(5px);
+  cursor: pointer;
+  transition: 0.3s;
+} button.fb:hover {
+  color: #4867aa;
+}
+button.x {
+  background-color: transparent;
+  border: hidden;
+  cursor: pointer;
+  font-size: 1.9rem;
+  margin-left: 15px;
+  transform: translateY(5px);
+  cursor: pointer;
+  transition: 0.3s;
+} button.x:hover {
+  color: #1da1f2;
+}
+button.yt {
+  background-color: transparent;
+  border: hidden;
+  cursor: pointer;
+  font-size: 1.9rem;
+  margin-left: 15px;
+  transform: translateY(5px);
+  cursor: pointer;
+  transition: 0.3s;
+} button.yt:hover {
+  color: #ff0000;
+}
+
+button.ba-to {
+  height: 50px;
+  width: 150px;
+  background-color: #cfcfcf;
+  font-size: 1rem;
+  font-weight: 600;
+  border: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+  transform: translateX(1020px);
+} button.ba-to:hover {
+  background-color: #eee;
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  height: 110px;
+}
+
+/* Logo */
+div.logo {
+  display: block;
+  position: relative;
+  top: 35px;
+  left: 100px;
+  cursor: pointer;
+}
+button.red {
+  color: #f74e1e;
+  background-color: transparent;
+  border: hidden;
+  margin-right: -2px;
+}
+button.green {
+  color: #7fba00;
+  background-color: transparent;
+  border: hidden;
+}
+button.blue {
+  color: #00a4ef;
+  background-color: transparent;
+  margin-right: -2px;
+  border: hidden;
+  transform: translateY(-6px);
+}
+button.yellow {
+  color: #ffba08;
+  background-color: transparent;
+  border: hidden;
+  transform: translateY(-6px);
+}
+div.logo-logo {
+  float: left;
+}
+div.logo > h2 {
+  transform: translateY(3px) translateX(9px);
+  color: #666666;
+}
+
+a.er {
+  text-decoration: none;
+  color: #000;
+  margin-right: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  position: relative;
+  left: 65%;
+  top: -10%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+a.foot {
+  text-decoration: none;
+  color: #000;
+  margin-right: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  position: relative;
+  left: 65%;
+  top: -10%;
+  font-size: 1rem;
+  font-weight: 600;
+}   a.foot::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s;
+  }   a.foot:hover:after {
+          transform: scaleX(1);
+      }
+
+footer > select {
+  border: hidden;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  position: relative;
+  top: 11%;
+  left: 45%;
+}
